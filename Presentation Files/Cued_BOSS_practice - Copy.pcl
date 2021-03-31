@@ -1,0 +1,245 @@
+string direc = "C://Users//Presentation//Desktop//Active Projects//Cued_BOSS//Presentation Files//";
+
+int ntrls = 20; # number of trials
+
+# array to be filled from pre-made sequence text files
+array<int> trl_order[ntrls]; 
+
+# Read-in the trial order
+input_file order_in = new input_file;
+string file_path = direc + "Sequences\\" + printf(random(1,2),"practice_sequence_%d.txt"); #the 2 of random should be the max amount of sequence files, all have 20 trials, always always at least 2 GOs before a No-GO or Passive and never No-GO followed by Passive
+order_in.open(file_path);
+order_in.set_delimiter( '\n' ); # for get_line()
+		
+int trl = 1;
+loop until
+	trl > ntrls
+begin
+	trl_order[trl] = order_in.get_int();
+	trl = trl+1;
+end;
+
+order_in.close();
+
+explain_text_1.present();
+explain_text_2.present();
+explain_text_3.present();
+
+loop #loop so you double click to start 
+	int j = 1;
+until
+j>2
+begin
+
+trial_start_button.present();
+j=j+1;
+end;
+## here it starts
+array <bitmap> animals[50];
+animals[1] = A_1;
+animals[2] = A_2;
+animals[3] = A_3;
+animals[4] = A_4;
+animals[5] = A_5;
+animals[6] = A_6;
+animals[7] = A_7;
+animals[8] = A_8;
+animals[9] = A_9;
+animals[10] = A_10;
+animals[11] = A_11;
+animals[12] = A_12;
+animals[13] = A_13;
+animals[14] = A_14;
+animals[15] = A_15;
+animals[16] = A_16;
+animals[17] = A_17;
+animals[18] = A_18;
+animals[19] = A_19;
+animals[20] = A_20;
+animals[21] = A_21;
+animals[22] = A_22;
+animals[23] = A_23;
+animals[24] = A_24;
+animals[25] = A_25;
+animals[26] = A_26;
+animals[27] = A_27;
+animals[28] = A_28;
+animals[29] = A_29;
+animals[30] = A_30;
+animals[31] = A_31;
+animals[32] = A_32;
+animals[33] = A_33;
+animals[34] = A_34;
+animals[35] = A_35;
+animals[36] = A_36;
+animals[37] = A_37;
+animals[38] = A_38;
+animals[39] = A_39;
+animals[40] = A_40;
+animals[41] = A_41;
+animals[42] = A_42;
+animals[43] = A_43;
+animals[44] = A_44;
+animals[45] = A_45;
+animals[46] = A_46;
+animals[47] = A_47;
+animals[48] = A_48;
+animals[49] = A_49;
+animals[50] = A_50;
+
+array <bitmap> objects[50];
+objects[1] = object_1;
+objects[2] = object_2;
+objects[3] = object_3;
+objects[4] = object_4;
+objects[5] = object_5;
+objects[6] = object_6;
+objects[7] = object_7;
+objects[8] = object_8;
+objects[9] = object_9;
+objects[10] = object_10;
+objects[11] = object_11;
+objects[12] = object_12;
+objects[13] = object_13;
+objects[14] = object_14;
+objects[15] = object_15;
+objects[16] = object_16;
+objects[17] = object_17;
+objects[18] = object_18;
+objects[19] = object_19;
+objects[20] = object_20;
+objects[21] = object_21;
+objects[22] = object_22;
+objects[23] = object_23;
+objects[24] = object_24;
+objects[25] = object_25;
+objects[26] = object_26;
+objects[27] = object_27;
+objects[28] = object_28;
+objects[29] = object_29;
+objects[30] = object_30;
+objects[31] = object_31;
+objects[32] = object_32;
+objects[33] = object_33;
+objects[34] = object_34;
+objects[35] = object_35;
+objects[36] = object_36;
+objects[37] = object_37;
+objects[38] = object_38;
+objects[39] = object_39;
+objects[40] = object_40;
+objects[41] = object_41;
+objects[42] = object_42;
+objects[43] = object_43;
+objects[44] = object_44;
+objects[45] = object_45;
+objects[46] = object_46;
+objects[47] = object_47;
+objects[48] = object_48;
+objects[49] = object_49;
+objects[50] = object_50;
+
+
+
+array <bitmap> my_bitmap_animals_go_s1[ntrls]; #this the amount of pictures it will go through, it will need 
+array <bitmap> my_bitmap_animals_go_s2[ntrls]; #all the bitmap arrays will have the sequence for that picture
+array <bitmap> my_bitmap_animals_nogo_s1[ntrls];
+array <bitmap> my_bitmap_objects_nogo_s2[ntrls];
+array <bitmap> my_bitmap_objects_passive_s1[ntrls];
+array <bitmap> my_bitmap_objects_passive_s2[ntrls];
+array <int> my_code[ntrls]; #all the my_code arrays have the sequence of when a code comes 
+array <int> my_code_2[ntrls];
+array <int> my_code_3[ntrls];
+array <int> my_code_4[ntrls];
+array <int> my_code_5[ntrls];
+array <int> my_code_6[ntrls];
+
+loop
+	int i = 1; 
+until
+	i > ntrls #not sure if it'll do 180 trial or 400
+begin
+
+	int pick_animal_go_s1; int pick_animal_go_s2; int pick_animal_nogo_s1;  int pick_object_nogo_s2; int pick_object_passive_s1; int pick_object_passive_s2;
+	
+	pick_animal_go_s1 = random(1,50);
+	pick_animal_go_s2 = random(1,50);
+	if pick_animal_go_s1 == pick_animal_go_s2    ##this loop here stops go_s1 from being the same from s2
+		then 
+		loop until pick_animal_go_s1 != pick_animal_go_s2   
+		begin
+		pick_animal_go_s2 = random(1,50);
+		end;
+	end;
+	my_bitmap_animals_go_s1[i] = animals[pick_animal_go_s1];
+   my_bitmap_animals_go_s2[i] = animals[pick_animal_go_s2];	
+	pick_animal_nogo_s1 = random(1,50);
+	my_bitmap_animals_nogo_s1[i]= animals[pick_animal_nogo_s1];	
+	my_code[i] = 101; # (1)animal(0)go(1)s1
+	my_code_2[i] = 102;# (1)animal(0)go(2)s2
+	my_code_3[i] = 111;# (1)animal(1)nogo(1)s1
+	pick_object_nogo_s2 = random(1,50);
+	my_bitmap_objects_nogo_s2[i] = objects[pick_object_nogo_s2];
+	
+	pick_object_passive_s1 = random(1,50);
+	pick_object_passive_s2 = random(1,50);
+		if pick_object_passive_s1 == pick_object_passive_s2   ##this loop here stops s1 from being the same from s2
+		then 
+		loop until pick_object_passive_s1 != pick_object_passive_s2   
+		begin
+		pick_object_passive_s2 = random(1,50);
+		end;
+	end;
+	my_bitmap_objects_passive_s1[i] = objects[pick_object_passive_s1];
+	my_bitmap_objects_passive_s2[i] = objects[pick_object_passive_s2];
+	my_code_4[i] = 212; #(2)plant(1)nogo(2)s2
+	my_code_5[i] = 221; #(2)plant(2)passive(1)s1
+	my_code_6[i] = 222; #(2)plant(2)passive(2)s2
+		
+			int isi = 1496;
+			isi_go_trial.set_duration( isi );
+			isi_nogo_trial.set_duration( isi );
+			isi_passive_trial.set_duration( isi );
+			
+			animal_go_s1.clear();
+			animal_go_s2.clear();
+			animal_go_s1.add_part(my_bitmap_animals_go_s1[i], 0 , 0);	 
+			animal_go_s2.add_part(my_bitmap_animals_go_s2[i], 0 , 0);	 
+			trial_stim_animal_go_s1.set_event_code(string(my_code[i]));
+			trial_stim_animal_go_s2.set_event_code(string(my_code_2[i]));
+			trial_stim_animal_go_s1.set_port_code(my_code[i]);
+			trial_stim_animal_go_s2.set_port_code(my_code_2[i]);
+			
+			animal_nogo_s1.clear();
+			animal_nogo_s1.add_part(my_bitmap_animals_nogo_s1[i], 0 , 0);
+			object_nogo_s2.clear();
+			object_nogo_s2.add_part(my_bitmap_objects_nogo_s2[i], 0 , 0);
+			trial_stim_animal_nogo_s1.set_event_code(string(my_code_3[i]));
+			trial_stim_object_nogo_s2.set_event_code(string(my_code_4[i]));
+			trial_stim_animal_nogo_s1.set_port_code(my_code_3[i]);
+			trial_stim_object_nogo_s2.set_port_code(my_code_4[i]);
+			
+			object_passive_s1.clear();
+			object_passive_s1.add_part(my_bitmap_objects_passive_s1[i], 0 , 0);
+			object_passive_s2.clear();
+			object_passive_s2.add_part(my_bitmap_objects_passive_s2[i], 0 , 0);
+			trial_stim_object_passive_s1.set_event_code(string(my_code_5[i]));
+			trial_stim_object_passive_s2.set_event_code(string(my_code_6[i]));
+			trial_stim_object_passive_s1.set_port_code(my_code_5[i]);
+			trial_stim_object_passive_s2.set_port_code(my_code_6[i]);
+			
+	start_trial.present();
+	if trl_order[i] == 1 then # present the go trial
+		trial_stim_go.present();
+		isi_go_trial.present();
+	elseif trl_order[i] == 2 then # present the nogo trial
+		trial_stim_nogo.present();
+		isi_nogo_trial.present();
+	elseif trl_order[i] == 3 then # present the passive trial
+		trial_stim_passive.present();
+		isi_passive_trial.present();
+	end;
+	i =i +1; # this is where it goes to the new trial 
+				
+	end;
+end_block_trial.present();
