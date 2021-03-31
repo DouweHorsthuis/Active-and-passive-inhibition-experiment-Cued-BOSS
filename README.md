@@ -8,11 +8,8 @@ Instead of a more traditional Go-No_go paradigm, this paradigm has both active a
 
 
 This experiment needs the software Presentation® from NeuroBehavioral Systems. https://www.neurobs.com/menu_presentation/presentation_faq
-There are 2 ways of running the experiment
-1) by opening the experiment in the Presentation Files folder
-  this is the normal way we run the paradigm - all the rest of this readme file will focus on this 
-2) by opening the For timing testing folder
-  this is if you want to test the timing, the stimuli are changed so the photodiode can pick it up easier, plus the trigger codes are different so that it's more likely they get picked up by the oscilloscope.
+You can run the experiment by opening the experiment in the Presentation Files folder
+
 In the stimuli folder you find all the individual animal and object pictures that are taken from the Bank of Standardized stimuli (BOSS) https://sites.google.com/site/bosstimuli/. 
 Logfiles, with experiment reaction times and other information automatically are placed in the logfile folder
 In the Presenation Files folder you'll find the experiment and the sequences that are semi-randomized, so we are sure that there are no 2 no-go trials in a row and how many no-go trials there are.

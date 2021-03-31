@@ -1,0 +1,330 @@
+###### Set-up sequences ######
+#200 trails that are semi-random. There are always at least 2 go trails before a no-go or passive trail (and these never folow eachother)  
+#there are 200 different files that can be chosen from
+string direc = "C://Users//Presentation//Desktop//Active Projects//Cued_BOSS//Presentation Files//";
+
+int ntrls = 200; # number of trials
+
+# array to be filled from pre-made sequence text files
+array<int> trl_order[ntrls]; 
+
+# Read-in the trial order
+input_file order_in = new input_file;
+string file_path = direc + "Sequences\\" + printf(random(1,200),"Qued_BOSS_sequence_%d.txt"); #there are 100 randomized sequences, all have 200 trials, always always at least 2 GOs before a No-GO or Passive and never No-GO followed by Passive
+
+
+order_in.open(file_path);
+order_in.set_delimiter( '\n' ); # for get_line()
+###### Set-up sequences ######
+int trl = 1;
+loop until
+	trl > ntrls
+begin
+	trl_order[trl] = order_in.get_int();
+	trl = trl+1;
+end;
+
+order_in.close();
+###### Set-up sequences ######	
+	
+### creating bitmaps with all the pictures###
+array <bitmap> animals[50];
+animals[1] = A_1;
+animals[2] = A_2;
+animals[3] = A_3;
+animals[4] = A_4;
+animals[5] = A_5;
+animals[6] = A_6;
+animals[7] = A_7;
+animals[8] = A_8;
+animals[9] = A_9;
+animals[10] = A_10;
+animals[11] = A_11;
+animals[12] = A_12;
+animals[13] = A_13;
+animals[14] = A_14;
+animals[15] = A_15;
+animals[16] = A_16;
+animals[17] = A_17;
+animals[18] = A_18;
+animals[19] = A_19;
+animals[20] = A_20;
+animals[21] = A_21;
+animals[22] = A_22;
+animals[23] = A_23;
+animals[24] = A_24;
+animals[25] = A_25;
+animals[26] = A_26;
+animals[27] = A_27;
+animals[28] = A_28;
+animals[29] = A_29;
+animals[30] = A_30;
+animals[31] = A_31;
+animals[32] = A_32;
+animals[33] = A_33;
+animals[34] = A_34;
+animals[35] = A_35;
+animals[36] = A_36;
+animals[37] = A_37;
+animals[38] = A_38;
+animals[39] = A_39;
+animals[40] = A_40;
+animals[41] = A_41;
+animals[42] = A_42;
+animals[43] = A_43;
+animals[44] = A_44;
+animals[45] = A_45;
+animals[46] = A_46;
+animals[47] = A_47;
+animals[48] = A_48;
+animals[49] = A_49;
+animals[50] = A_50;
+
+array <bitmap> objects[50];
+objects[1] = object_1;
+objects[2] = object_2;
+objects[3] = object_3;
+objects[4] = object_4;
+objects[5] = object_5;
+objects[6] = object_6;
+objects[7] = object_7;
+objects[8] = object_8;
+objects[9] = object_9;
+objects[10] = object_10;
+objects[11] = object_11;
+objects[12] = object_12;
+objects[13] = object_13;
+objects[14] = object_14;
+objects[15] = object_15;
+objects[16] = object_16;
+objects[17] = object_17;
+objects[18] = object_18;
+objects[19] = object_19;
+objects[20] = object_20;
+objects[21] = object_21;
+objects[22] = object_22;
+objects[23] = object_23;
+objects[24] = object_24;
+objects[25] = object_25;
+objects[26] = object_26;
+objects[27] = object_27;
+objects[28] = object_28;
+objects[29] = object_29;
+objects[30] = object_30;
+objects[31] = object_31;
+objects[32] = object_32;
+objects[33] = object_33;
+objects[34] = object_34;
+objects[35] = object_35;
+objects[36] = object_36;
+objects[37] = object_37;
+objects[38] = object_38;
+objects[39] = object_39;
+objects[40] = object_40;
+objects[41] = object_41;
+objects[42] = object_42;
+objects[43] = object_43;
+objects[44] = object_44;
+objects[45] = object_45;
+objects[46] = object_46;
+objects[47] = object_47;
+objects[48] = object_48;
+objects[49] = object_49;
+objects[50] = object_50;
+
+
+array <bitmap> my_bitmap_s1[ntrls]; #used for creating the sequence of which picture should show up as S1
+array <bitmap> my_bitmap_s2[ntrls]; #used for creating the sequence of which picture should show up as S2
+array <int> my_code_s1[ntrls]; #used for creating the sequence of which trigger should show up as S1
+array <int> my_code_s2[ntrls]; #used for creating the sequence of which trigger should show up as S2
+
+array<int> my_all[ntrls]; #array of all how many pictures there need to be prepared
+
+
+trial_start_button.present();
+trial_start_button_2.present();
+trial_start_button_3.present();
+
+## here it starts creating the sequence of both triggers and pictures for S1 and S2 
+
+loop
+	int i = 1;
+until
+	i > ntrls 
+begin
+	my_all[i] = 0;
+	i = i + 1;	
+end;
+
+loop
+	int i = 1; int s1 ; int s2;
+until
+	i > ntrls
+begin
+	loop
+		bool tr = false; 
+	until
+		tr == true
+	begin
+	   if trl_order[i] == 1 || i <= 5 || i==101 then
+			tr = true;			
+			loop
+				bool ty = false
+			until
+				ty == true
+			begin
+				s1 = random(1,50);
+				s2 = random(1,50);
+					if s1 == s2 then   ##this loop here stops s1 from being the same from s2
+					loop 
+					s2 = random(1,50);
+					until s1 != s2   
+						begin
+						s2 = random(1,50);
+						end; 
+					else
+					end;
+				if my_all[s1] == 0 then 	## this part is so 
+				   my_all[s1] = 1;			## the add.picture works 
+				   ty = true;					## it freaks out when it sees a 0
+			else
+					ty = true;											
+				end;
+			end;
+			my_bitmap_s1[i] = animals[s1];
+		   my_code_s1[i] = 101; #S1 go
+			my_bitmap_s2[i] = animals[s2];
+			my_code_s2[i] = 102; #S2 go
+
+      elseif trl_order[i] == 2 then
+			tr = true;
+			loop
+				bool ty = false
+			until
+				ty == true
+			begin
+				s1 = random(1,50);
+				s2 = random(1,50);
+				if s1 == s2    ##this loop here stops s1 from being the same from s2
+					then 
+					loop s2 = random(1,50);
+					until s1 != s2   
+					begin
+						s2 = random(1,50);
+				   end; 
+		      else
+				end; 
+				if my_all[s1] == 0 then ## this part is so 
+				   my_all[s1] = 1;			## the add.picture works 
+				   ty = true;					## it freaks out when it sees a 0
+				else									
+					ty = true;	
+				end;
+			end;  
+				
+			my_bitmap_s1[i] = animals[s1];
+			my_code_s1[i] = 111; #S1 no-go
+			my_bitmap_s2[i] = objects[s2];
+			my_code_s2[i] = 112; #S2 no-go
+
+		elseif trl_order[i] == 3 then
+			tr = true;			
+			loop
+				bool ty = false
+			until
+				ty == true
+			begin
+				s1 = random(1,50);
+				s2 = random(1,50);
+				if s1 == s2    ##this loop here stops s1 from being the same from s2
+					then 
+					loop s2 = random(1,50);
+					until s1 != s2   
+						begin
+						s2 = random(1,50);
+				   end; 
+		      else
+				end;
+				if my_all[s1] == 0 then ## this part is so 
+				   my_all[s1] = 1;			## the add.picture works 
+				   ty = true;					## it freaks out when it sees a 0
+				else								
+					ty = true;			
+				end;
+			end;
+			my_bitmap_s1[i] = objects[s1];
+			my_code_s1[i] = 121; #S1 passive_object
+			my_bitmap_s2[i] = objects[s2];
+			my_code_s2[i] = 122; #S2 passive_object
+
+	   else 
+			tr = true;			
+			loop
+				bool ty = false
+			until
+				ty == true
+			begin
+				s1 = random(1,50);
+				s2 = random(1,50);
+				if s1 == s2    ##this loop here stops s1 from being the same from s2
+					then 
+					loop s2 = random(1,50);
+					until s1 != s2   
+						begin
+						s2 = random(1,50);
+				   end; 
+		      else
+				end;
+				if my_all[s1] == 0 then ## this part is so 
+				   my_all[s1] = 1;			## the add.picture works 
+				   ty = true;					## it freaks out when it sees a 0
+				else								
+					ty = true;			
+				end;
+			end;
+			my_bitmap_s1[i] = objects[s1];
+			my_code_s1[i] = 131; #S1 passive_object
+			my_bitmap_s2[i] = animals[s2];
+			my_code_s2[i] = 132; #S2 passive_animal	
+
+		
+			end;
+		end;	
+i = i + 1;
+end;
+
+
+loop
+	int i = 1; 
+until
+	i > ntrls #200trls
+begin		
+
+	pic_s1.clear(); #clearing the S1 picture
+	pic_s2.clear(); #clearing the S2 picture
+	pic_s1.add_part(my_bitmap_s1[i], 0 , 0);	 #adding the new S1 pictures
+	pic_s2.add_part(my_bitmap_s2[i], 0 , 0);	 #adding the new S1 pictures
+	trigger_s1.set_event_code(string(my_code_s1[i])); #adding the new S1 trigger for logfile
+	trigger_s2.set_event_code(string(my_code_s2[i])); #adding the new S2 trigger for logfile
+	trigger_s1.set_port_code(my_code_s1[i]); #adding the new S1 trigger 
+	trigger_s2.set_port_code(my_code_s2[i]); #adding the new S1 trigger
+	trial_stim.present();
+	   	
+	if my_code_s1[i] == 101 then			#this makes sure
+		 isi_go_trial.present();			#that the correct ISI
+	elseif my_code_s1[i] == 111 then		#goes with the right trail
+		 isi_nogo_trial.present();			#so we can see hits/miss in 
+	else											#in the response messenger
+		isi_passive_trial.present();
+	end;
+	i =i +1; # this is where it goes to the new trial 
+	if i == 100 then
+		pause_block_trial.present();
+		trial_start_button.present();
+		trial_start_button_2.present();
+		trial_start_button_3.present();
+	end;
+end;
+
+end_block_trial.present();
+
