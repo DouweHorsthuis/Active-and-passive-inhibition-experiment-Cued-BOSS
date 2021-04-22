@@ -1,1 +1,0 @@
-Place your logfiles in this folder
