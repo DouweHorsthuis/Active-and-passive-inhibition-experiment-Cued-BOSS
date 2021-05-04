@@ -37,3 +37,5 @@ participant should never respond for Object - Animal pair (passive because first
  trigger is right on the stimulus - absolutley 0 jitter.
  always run on a 60hz screen while making sure that the presentation settings are on 1280X1024X32 (60Hz) and that the screen is duplicated
  use cued_boss_64_ConfigFile_512hz.cfg config file from ActiView so that it saves/pauses automatic
+ 
+ If you want to use this paradigm, please contact douwehorsthuis@gmail.com for more info including the stimuli. 
