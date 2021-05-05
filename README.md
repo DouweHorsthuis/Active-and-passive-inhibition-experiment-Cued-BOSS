@@ -139,15 +139,15 @@ Project Link: [https://github.com/DouweHorsthuis/Active-and-passive-inhibition-e
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS.svg?style=for-the-badge
 [contributors-url]: https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS.svg?style=for-the-badge
 [forks-url]: https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/network/members
-[stars-shield]: https://img.shields.io/github/stars/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS.svg?style=for-the-badge
 [stars-url]: https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/stargazers
-[issues-shield]: https://img.shields.io/github/issues/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS.svg?style=for-the-badge
 [issues-url]: https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/issues
-[license-shield]: https://img.shields.io/github/license/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS.svg?style=for-the-badge
 [license-url]: https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/douwe-horsthuis-725bb9188
