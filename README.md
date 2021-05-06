@@ -9,13 +9,14 @@
 <br />
 <p align="center">
   <a href="https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/">
-    <img src="images/logo.jpeg" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpeg" alt="Logo" width="286" height="120">
   </a> 
 
 <h3 align="center">Active and passive inhibition experiment (Cued BOSS) </h3>
 
-<h4 align="center">This project is an active and passive go-no-go inhibition experiment for [Presentation® (NeuroBehavioral Systems)](https://www.neurobs.com/).For most go-no-go task the participant would be asked to click for a reocorring stimulus and not click for a different type of stimulus that occures significantly less frequent (inhibition). In this case the participant has a Cue that gives them info if they have to potentially inhibit (active inhibition) or if they need to inhibit for sure (passive inhibition) for the following stimulus. </h4>
+<h4 align="center">This project is an active and passive go-no-go inhibition experiment for Presentation® (NeuroBehavioral Systems). For most go-no-go task the participant would be asked to click for a reocorring stimulus and not click for a different type of stimulus that occures significantly less frequent (inhibition). In this case the participant has a Cue that gives them info if they have to potentially inhibit (active inhibition) or if they need to inhibit for sure (passive inhibition) for the following stimulus. </h4>
 
+<p align="center">
 <a href="https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/">
     <img src="images/paradigm.png" alt="paradigm" width="583" height="365">
 
@@ -50,7 +51,7 @@
 This experiment looks at the the passive and active inhibition during a go-no-go task. This experiment was developed as a follow up study after 
 [Ana A. Francisco, Douwe J. Horsthuis, Maryann Popiel, John J. Foxe and Sophie Molholm (2020) Atypical response inhibition and error processing in 22q11.2 Deletion Syndrome and schizophrenia: Towards neuromarkers of disease progression and risk](https://pubmed.ncbi.nlm.nih.gov/32731196/)
 
-Instead of a more traditional Go-No_go experiment, this experiment has both active and pasive inhibition. Normally the participant would be asked to click for a reocorring stimulus and not click for a different type of stimulus that occures significantly less frequent. In this case the participant has a Cue that gives them info if they have to potentially inhibit (active inhibition) or if they need to inhibit for sure (passive inhibition). During the experiment participants will see stimulus pairs. If the pair is a animal, followed by an animal, they click (go trail, happens most of the time), for a small amount of the time there might be one of the no-go trials, that never follow eachother, so there is always a go-trail before them. The no-go trials are passive (object - animal or object - object) or active (animal- object). 
+Instead of a more traditional go-no-go experiment, this experiment has both active and pasive inhibition. Normally the participant would be asked to click for a reocorring stimulus and not click for a different type of stimulus that occures significantly less frequent. In this case the participant has a Cue that gives them info if they have to potentially inhibit (active inhibition) or if they need to inhibit for sure (passive inhibition). During the experiment participants will see stimulus pairs. If the pair is a animal, followed by an animal, they click (go trial, happens most of the time), for a small amount of the time there might be one of the no-go trials, that never follow eachother, so there is always a go-trial before them. The no-go trials are passive (object - animal or object - object) or active (animal- object). 
 
 
 ### Built With
@@ -66,7 +67,9 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 You need to have any version of the Presentation software. 
+
 To achieve the same stable time resolution this experiment should be presented on a 60Hz screen.
+
 Please contact douwehorsthuis@gmail.com for access to the stimuli
 
 ### Installation
@@ -74,8 +77,11 @@ Please contact douwehorsthuis@gmail.com for access to the stimuli
 [Download this Repo](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS)
 
 Create 3 folders
+
 Folder 1 - "Presenation Files"  - this folder should contain all the presenation files and Sequences found in the "src" folder
+
 Folder 2 - "Stimuli"            - this folder should contain all the images need for the experiment
+
 Folder 3 - "Logfiles"           - this folder will be filled with all the presenation Logfiles containing the behavioral data
 
 
@@ -87,7 +93,7 @@ The stimuli are all the individual animal and object pictures that are taken fro
 
 ### Logfiles
 
-Logfiles, with experiment reaction times and other information automatically should be placed in the logfile folder. In these logfiles you will find the behavioral information of each time the experiment is ran. 
+Logfiles with experiment reaction times and other information automatically should be placed in the logfile folder. In these logfiles you will find the behavioral information of each time the experiment is ran. 
 
 ### Sequences 
 
