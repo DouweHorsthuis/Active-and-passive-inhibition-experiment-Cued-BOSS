@@ -127,18 +127,19 @@ This leads to 3 types of response:
 ### Trigger codes
 
 The presentation software sends codes to the EEG system so that the responses and the stimuli can be timelocked in the EEG data. The following is an explanation of each trigger code: 
-
-	port code 101 = S1 go (animal)
-	port code 102 = S2 go (animal)
-	port code 111 = S1 no-go (animal)
-	port code 112 = S2 no-go (object)
-	port code 121 = S1 passive(object)
-	port code 122 = S2 passive (object)
-  port code 131 = S1 Passive (object)
-  port code 132 = S2 Passive (animal) 
-	port code 2   = fixation cross
-  port code 201 = start recording
-  port code 200 = pause recording 
+```
+port code 101 = S1 go (animal)
+port code 102 = S2 go (animal)
+port code 111 = S1 no-go (animal)
+port code 112 = S2 no-go (object)
+port code 121 = S1 passive(object)
+port code 122 = S2 passive (object)
+port code 131 = S1 Passive (object)
+port code 132 = S2 Passive (animal)
+port code 2   = fixation cross
+port code 201 = start recording
+port code 200 = pause recording 
+```
 
 ### Timing
 The reason this experiment is coded in presentation, is because of the timing resolution of this software/language. When setup correctly this experiment has potentaily 1ms of jitter. This is measured here at our lab, using an oscilloscope. It is critical that this is re-tested before EEG data is collected. 
@@ -149,7 +150,7 @@ This experiment is used to collected EEG data. To have enough trials one should 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/master/LICENSE.txt) for more information.
 
 
 
