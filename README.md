@@ -36,7 +36,8 @@
     - [Type of responses](#type-of-responses)
     - [Trigger codes](#trigger-codes)
     - [Timing](#timing)
-    - [Data collection](#data-collection)
+3. [Data collection](#data-collection)
+    - [Pilot data](#pilot-data)
 3. [License](#license)
 3. [Contact](#contact)
 3. [Acknowledgements](#acknowledgements)
@@ -144,8 +145,17 @@ port code 200 = pause recording
 ### Timing
 The reason this experiment is coded in presentation, is because of the timing resolution of this software/language. When setup correctly this experiment has potentially 1ms of jitter. This is measured here at our lab, using an oscilloscope. It is critical that this is re-tested before EEG data is collected. 
 
-### Data collection
+## Data collection
 This experiment is used to collected EEG data. To have enough trials one should run all the scenarios in a row. This should lead to enough inhibition errors to look at the data.
+
+### Pilot Data  
+To make sure the paradigm does what we hoped we tested it by collecting data on a couple of control participants. We wanted to see if there was a difference between a hit and an correct rejection and if there was any difference in CNV between when a participant knew they don't have to prepare and when they have to perpare for a possible inhibition.
+
+**Hit vs Correct Rejection**  
+![Hit vs CR](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/main/images/Cued_boss_hit_cr.png)  
+  
+**CNV (preparing vs not preparing)**
+![CNV](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/main/images/Cued_boss_CNV.png) 
 
 <!-- LICENSE -->
 ## License
