@@ -155,7 +155,9 @@ To make sure the paradigm does what we hoped we tested it by collecting data on 
 ![Hit vs CR](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/main/images/Cued_boss_hit_cr.png)  
   
 **CNV (preparing vs not preparing)**
-![CNV](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/main/images/Cued_boss_CNV.png)  
+
+![CNV](https://github.com/DouweHorsthuis/Active-and-passive-inhibition-experiment-Cued-BOSS/blob/main/images/Cued_boss_CNV.png) 
+
 
 <!-- LICENSE -->
 ## License
